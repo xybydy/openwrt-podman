@@ -9,7 +9,7 @@ LUCI_TITLE:=upodman luci interface
 LUCI_DEPENDS:=+luci-mod-status +upodman
 LUCI_PKGARCH:=all
 
-include ../../../luci/luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 define Package/luci-app-upodman/postinst
 #!/bin/sh

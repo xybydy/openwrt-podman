@@ -9,7 +9,7 @@ LUCI_TITLE:=Systembus cpu statistics
 LUCI_DEPENDS:=+luci-mod-status +systembus
 LUCI_PKGARCH:=all
 
-include ../../../luci/luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 define Package/luci-app-systembus-cpu/postinst
 #!/bin/sh

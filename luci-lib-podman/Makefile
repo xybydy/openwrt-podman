@@ -11,6 +11,6 @@ LUCI_DESCRIPTION:=Podman API for LuCI
 LUCI_DEPENDS:=@(aarch64||arm||x86_64) +luci-lib-jsonc
 LUCI_PKGARCH:=all
 
-include ../../../luci/luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
