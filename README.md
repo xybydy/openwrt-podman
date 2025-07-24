@@ -10,9 +10,7 @@ git clone --depth 1 --single-branch https://github.com/breeze303/openwrt-podman 
 make menuconfig
 ```
 
-![PixPin_2025-07-02_11-18-48](https://github.com/user-attachments/assets/813c7c7f-a3fb-4cdc-953d-71bd49849f16)
-
+<img width="2312" height="1217" alt="796e3c56133385b0fbaf38f4f6dbc6c6" src="https://github.com/user-attachments/assets/a48533f7-e74d-45fd-b0c0-f93cea1b9fb0" />
 
 ## 待优化
 - 1.其他页面显示不正常，目前只有主页显示
-- 2.未进行汉化
