@@ -10,7 +10,10 @@ git clone --depth 1 --single-branch https://github.com/breeze303/openwrt-podman 
 make menuconfig
 ```
 
-<img width="2312" height="1217" alt="796e3c56133385b0fbaf38f4f6dbc6c6" src="https://github.com/user-attachments/assets/a48533f7-e74d-45fd-b0c0-f93cea1b9fb0" />
+<img width="1656" height="769" alt="image" src="https://github.com/user-attachments/assets/4385f081-aa66-4037-9aa9-a9a319e2a2c9" />
+<img width="1656" height="769" alt="image" src="https://github.com/user-attachments/assets/5a3d1965-3a10-47e7-98a7-6d0db31f2eba" />
+<img width="1656" height="769" alt="image" src="https://github.com/user-attachments/assets/50fd318f-919e-4ddd-935c-90f3f1c881aa" />
+<img width="1656" height="769" alt="image" src="https://github.com/user-attachments/assets/96b1ab92-ffb5-473e-8c33-0954eadc004a" />
 
 ## 待优化
-- 1.其他页面显示不正常，目前只有主页显示
+- 无法进行交互，只能查看
