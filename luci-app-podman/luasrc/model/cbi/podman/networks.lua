@@ -16,33 +16,41 @@ else
 	return
 end
 
-local get_networks = function ()
-	local data = {}
+local get_networks = function()
+    local data = {}
 
-	if type(networks) ~= "table" then
-		return nil
-	end
+    if type(networks) ~= "table" then
+        return nil
+    end
 
-	for i, v in ipairs(networks) do
-		local index = v.Created .. v.Id
+    for _, v in ipairs(networks) do
+        local index = (v.created or os.time()) .. (v.id or v.name or "dummy")
 
-		data[index]={}
-		data[index]["_selected"] = 0
-		data[index]["_id"] = v.Id:sub(1,12)
-		data[index]["_name"] = v.Name
-		data[index]["_driver"] = v.Driver
+        data[index] = {
+            _selected   = 0,
+            _id         = (v.id or "none"):sub(1, 12),
+            _name       = v.name  or "-",
+            _driver     = v.driver or "-",
+            _interface  = nil,
+            _subnet     = v.ipam
+                          and v.ipam.config
+                          and v.ipam.config[1]
+                          and v.ipam.config[1].subnet
+                          or nil,
+            _gateway    = v.ipam
+                          and v.ipam.config
+                          and v.ipam.config[1]
+                          and v.ipam.config[1].gateway
+                          or nil,
+        }
+        if v.driver == "bridge" and v.options then
+            data[index]._interface = v.options["com.docker.network.bridge.name"]
+        elseif v.driver == "macvlan" and v.options then
+            data[index]._interface = v.options.parent
+        end
+    end
 
-		if v.Driver == "bridge" then
-			data[index]["_interface"] = v.Options["com.docker.network.bridge.name"]
-		elseif v.Driver == "macvlan" then
-			data[index]["_interface"] = v.Options.parent
-		end
-
-		data[index]["_subnet"] = v.IPAM and v.IPAM.Config[1] and v.IPAM.Config[1].Subnet or nil
-		data[index]["_gateway"] = v.IPAM and v.IPAM.Config[1] and v.IPAM.Config[1].Gateway or nil
-	end
-
-	return data
+    return data
 end
 
 local network_list = get_networks()

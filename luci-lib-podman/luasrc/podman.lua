@@ -516,7 +516,7 @@ function _podman.new(options)
 		socket_path = _options.socket_path or "/run/podman/podman.sock",
 		host = _options.host or "localhost",
 		path = _options.path or "libpod",
-		version = _options.version or "v3.0.0",
+		version = _options.version or "v5.2.2",
 		user_agent = _options.user_agent or "LuCI",
 		protocol = _options.protocol or "HTTP/1.1",
 		debug = _options.debug or false,

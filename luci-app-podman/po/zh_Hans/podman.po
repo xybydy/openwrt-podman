@@ -586,3 +586,11 @@ msgstr "Api 版本"
 #: applications/luci-app-podman/luasrc/model/cbi/podman/overview.lua:28
 msgid "Podman version"
 msgstr "Podman 版本"
+
+#: applications/luci-app-podman/luasrc/model/cbi/podman/overview.lua:32
+msgid "Socket path"
+msgstr "Socket 接口"
+
+#: applications/luci-app-podman/luasrc/model/cbi/podman/overview.lua:33
+msgid "Graph root"
+msgstr "podman 路径"
